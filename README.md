@@ -1,4 +1,4 @@
-# Quick Git
+# Quick Git for Bioinformatics
 
 ## Introduction
 
@@ -25,8 +25,8 @@ But first, tell Git who you are with:
 
 ### Creating a repository from a directory, adding files, and committing
 
-    mkdir testdemo
-    cd testdemo
+    mkdir vince
+    cd vince
     echo "This is a test repository." > test.txt
     git init
     git add test.txt # this is called "staging"
@@ -49,14 +49,10 @@ If you have an existing repository you want to clone, you use git
 clone. This essentially initializes a empty local git repository, and
 pulls a clone from the remote repository.
 
-    ### https
-    git clone https://github.com/thanhttb/thithu-frontend.git
-    ###ssh
-    git@github.com:thanhttb/thithu-frontend.git
-    ###github cli
-    gh repo clone thanhttb/thithu-frontend
-    
-    download zip
+    git clone ./vince joe
+    ls
+    cd joe
+    git log
 
 ### Working with remotes
 
@@ -78,7 +74,7 @@ directory full of our project's bare reposistories. In this example,
 we'll create a bare repository named "remote". Remember, Git works
 with SSH!
 
-    rm -rf {file}
+    rm -rf joe 
 
     mkdir remote # this is our pretend remote; in real life, put this on a server everyone has access to
     cd remote
@@ -88,7 +84,7 @@ with SSH!
 
 Now, we're going to tell my local repository about this remote one.
 
-    cd testdemo
+    cd vince
     git remote add origin ../remote
     git remote ## or cat .git/config, SVN users, note that there is only ONE, YES ONE directory!
 
@@ -179,6 +175,7 @@ conflicts.
     git commit -m "merge conflict resolved"
     git push origin master # might as well?
 
+## What's next?
 
  - Following remote branches
  - git refspecs
