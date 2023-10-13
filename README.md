@@ -101,9 +101,7 @@ Bây giờ, hãy push nội dung vào kho lưu trữ từ xa.
 git push -u origin master
 ##
 
-![image](https://github.com/bqminh30/git-demo/assets/64219602/611620c9-983f-42e4-bcae-91cb9232ff13)
-
-![image](https://github.com/bqminh30/git-demo/assets/64219602/d162429c-6f2d-4dd7-97d6-9ca19544af0f)
+<img width="755" alt="Screen Shot 2023-10-13 at 22 17 53" src="https://github.com/bqminh30/git-demo/assets/64219602/addaac04-7d4b-4d51-9934-f202e4c7bdd0">
 
 ##1......<<<<<<< HEAD=======2......3......>>>>>>> dev_a4......
 Có thể hiểu những dòng mới trong file person.java này là "Conflict deviders" bộ chia xung đột. Trong đó: 
