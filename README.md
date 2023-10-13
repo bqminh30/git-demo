@@ -14,6 +14,7 @@ Sau đó, hãy kiểm tra thư mục làm việc hiện tại:
 pwd
 ##
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/00396eba-e3df-40f6-9b50-4913d183ebc5)
+
 Để tạo một kho lưu trữ trong thư mục làm việc, hãy sử dụng các lệnh sau:
 ##
 mkdir Git_Demo
@@ -22,6 +23,7 @@ pwd
 ##
 Chúng ta có thể đến vị trí thư mục và kiểm tra thư mục Git_demo.
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/e48cc0bb-ffb5-44ec-94d3-b11b33ece8b9)
+
 Thư mục "Git_demo" hiện tại sẽ trống.
 
 Hãy tạo một thư mục cho kho lưu trữ.
@@ -31,6 +33,7 @@ cd FirstRepo
 pwd
 ##
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/7011e3b8-9d0b-43d3-a199-77350ab03d78)
+
 Thư mục "FirstRepo" trống. Bây giờ chúng ta sẽ khởi tạo một kho lưu trữ vào thư mục của mình.
 ##
 Git init
@@ -40,7 +43,9 @@ Git init
 Thứ được gọi là "master" xuất hiện trên màn hình. Bất cứ khi nào kho lưu trữ Git được tạo lần đầu tiên, nó sẽ tạo một nhánh và tên của nhánh đó là master. Điều hướng đến thư mục; bạn có thể tìm thấy thư mục ".git" ẩn.
 
 Nếu bạn kiểm tra thư mục, bạn có thể thấy một số thư mục và cấu hình. Đảm bảo bạn không thực hiện bất kỳ thay đổi nào đối với bất kỳ thư mục nào.
+
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/a30dbe9f-44dd-4863-ad18-0207b85b6fc9)
+
 Tạo hai file và ghi lại từng cái một.
 Đối với notepad đầu tiên, các lệnh như sau:
 ##
