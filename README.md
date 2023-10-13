@@ -18,15 +18,15 @@ table, not a 5GB SAM file).
 
 But first, tell Git who you are with: 
 
-    git config --global user.name "Vince Buffalo"
-    git config --global user.email vsbuffalo@ucdavis.edu
+    git config --global user.name "Quang Minh"
+    git config --global user.email bqminh30@gmail.com
 
 ## Creating repositories, adding files, and committing
 
 ### Creating a repository from a directory, adding files, and committing
 
     mkdir testdemo
-    cd vince
+    cd testdemo
     echo "This is a test repository." > test.txt
     git init
     git add test.txt # this is called "staging"
