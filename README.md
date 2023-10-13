@@ -76,6 +76,12 @@ git push -u origin master
 ##
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/611620c9-983f-42e4-bcae-91cb9232ff13)
 
+![image](https://github.com/bqminh30/git-demo/assets/64219602/d162429c-6f2d-4dd7-97d6-9ca19544af0f)
+##1......<<<<<<< HEAD=======2......3......>>>>>>> dev_a4......
+Có thể hiểu những dòng mới trong file person.java này là "Conflict deviders" bộ chia xung đột. Trong đó: 
++ Đầu tiên, dòng "<<<<<<< HEAD" là nội dung tồn tại trong nhánh master hiện tại mà tham chiếu HEAD đang trỏ tới.
++ Thứ hai, tất cả nội dung phía sau dòng "=======" là "trung tâm" của cuộc xung đột. Thể hiện nội dung xung đột. 
++ Thứ ba, tất cả nội dung phía sau dòng ">>>>>>> dev_a" là nội dung có trong nhánh dev_a chuẩn bị hợp nhất vào master.
 
 
 
