@@ -1,4 +1,4 @@
-![image](https://github.com/bqminh30/git-demo/assets/64219602/e6a4420c-584c-4254-8e95-3378edc39e89)![image](https://github.com/bqminh30/git-demo/assets/64219602/6301ca06-9f95-49cc-b574-82e1e40b8a5e)## Introduction
+## Introduction
 
 Hãy bắt đầu bằng việc mở Git Bash và định cấu hình nó bằng tên người dùng và ID email.
 
