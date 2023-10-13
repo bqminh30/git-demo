@@ -9,6 +9,7 @@ Git config --global user.email siddam.bharat@simplilearn.net
 Git config –list
 ##
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/c03bf776-4ed2-430a-bd45-e9d651feae95)
+
 Sau đó, hãy kiểm tra thư mục làm việc hiện tại:
 ##
 pwd
@@ -53,20 +54,27 @@ touch alpha.txt
 notepad alpha.txt
 ##
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/77221d59-116e-4bea-8a8e-ddc20723643a)
+
 Tiếp theo, hãy kiểm tra trạng thái của file đã được tạo.
 git status
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/3edeff63-b37e-4347-bfd4-5600194424af)
+
 git add .
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/fde2200a-474b-467b-a0ee-a71f89959b06)
+
 git commit -m "alpha"
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/4a635802-23ad-49e9-8c83-04e9cfdc6897)
+
 Hãy kiểm tra lại trạng thái của file.
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/11d21a3e-b524-415b-8a60-aeecdef52004)
 
 Bây giờ, hãy đẩy hai notepad trên GitHub. Mở tài khoản GitHub của bạn và tạo một kho lưu trữ mới. Tên của kho lưu trữ sẽ là "FirstRepo."
+
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/947fab64-c11f-4695-b8e4-31c29b4d6ded)
+
 Sao chép URL "git remote add origin" URL.
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/0bd232bd-a32b-4218-bc12-45bf14da8aa2)
+
 Dán URL đã sao chép vào Git Bash.
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/fab1ff30-451b-4f22-8697-d396b5cdcbaf)
 
@@ -82,6 +90,7 @@ git push -u origin master
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/611620c9-983f-42e4-bcae-91cb9232ff13)
 
 ![image](https://github.com/bqminh30/git-demo/assets/64219602/d162429c-6f2d-4dd7-97d6-9ca19544af0f)
+
 ##1......<<<<<<< HEAD=======2......3......>>>>>>> dev_a4......
 Có thể hiểu những dòng mới trong file person.java này là "Conflict deviders" bộ chia xung đột. Trong đó: 
 + Đầu tiên, dòng "<<<<<<< HEAD" là nội dung tồn tại trong nhánh master hiện tại mà tham chiếu HEAD đang trỏ tới.
