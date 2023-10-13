@@ -1,184 +1,82 @@
-# Quick Git for Bioinformatics
+![image](https://github.com/bqminh30/git-demo/assets/64219602/e6a4420c-584c-4254-8e95-3378edc39e89)![image](https://github.com/bqminh30/git-demo/assets/64219602/6301ca06-9f95-49cc-b574-82e1e40b8a5e)## Introduction
 
-## Introduction
+Hãy bắt đầu bằng việc mở Git Bash và định cấu hình nó bằng tên người dùng và ID email.
 
-This demo has the parts: 
+Để cấu hình, chúng ta sử dụng lệnh sau:
+##
+Git config --global user.name "Simplilearn GitHub"
+Git config --global user.email siddam.bharat@simplilearn.net
+Git config –list
+##
+![image](https://github.com/bqminh30/git-demo/assets/64219602/c03bf776-4ed2-430a-bd45-e9d651feae95)
+Sau đó, hãy kiểm tra thư mục làm việc hiện tại:
+##
+pwd
+##
+![image](https://github.com/bqminh30/git-demo/assets/64219602/00396eba-e3df-40f6-9b50-4913d183ebc5)
+Để tạo một kho lưu trữ trong thư mục làm việc, hãy sử dụng các lệnh sau:
+##
+mkdir Git_Demo
+cd Git_Demo
+pwd
+##
+Chúng ta có thể đến vị trí thư mục và kiểm tra thư mục Git_demo.
+![image](https://github.com/bqminh30/git-demo/assets/64219602/e48cc0bb-ffb5-44ec-94d3-b11b33ece8b9)
+Thư mục "Git_demo" hiện tại sẽ trống.
 
- 1. Create a git repository, both from a directory and from
- cloning. Add and commit files.
- 2. Working with remotes.
- 3. Branch and merge.
+Hãy tạo một thư mục cho kho lưu trữ.
+##
+mkdir FirstRepo
+cd FirstRepo
+pwd
+##
+![image](https://github.com/bqminh30/git-demo/assets/64219602/7011e3b8-9d0b-43d3-a199-77350ab03d78)
+Thư mục "FirstRepo" trống. Bây giờ chúng ta sẽ khởi tạo một kho lưu trữ vào thư mục của mình.
+##
+Git init
+##
+![image](https://github.com/bqminh30/git-demo/assets/64219602/1e7609f9-efe0-4551-bd56-7b14a38b7e7d)
 
-Unless you're working with collaborators, you'll mostly use the first
-and third parts.
+Thứ được gọi là "master" xuất hiện trên màn hình. Bất cứ khi nào kho lưu trữ Git được tạo lần đầu tiên, nó sẽ tạo một nhánh và tên của nhánh đó là master. Điều hướng đến thư mục; bạn có thể tìm thấy thư mục ".git" ẩn.
 
-Think this is just useful for code? Think again! You ~~can~~ should
-version control papers, and small datasets (e.g. an RNA-seq counts
-table, not a 5GB SAM file).
+Nếu bạn kiểm tra thư mục, bạn có thể thấy một số thư mục và cấu hình. Đảm bảo bạn không thực hiện bất kỳ thay đổi nào đối với bất kỳ thư mục nào.
+![image](https://github.com/bqminh30/git-demo/assets/64219602/a30dbe9f-44dd-4863-ad18-0207b85b6fc9)
+Tạo hai file và ghi lại từng cái một.
+Đối với notepad đầu tiên, các lệnh như sau:
+##
+touch alpha.txt
+notepad alpha.txt
+##
+![image](https://github.com/bqminh30/git-demo/assets/64219602/77221d59-116e-4bea-8a8e-ddc20723643a)
+Tiếp theo, hãy kiểm tra trạng thái của file đã được tạo.
+git status
+![image](https://github.com/bqminh30/git-demo/assets/64219602/3edeff63-b37e-4347-bfd4-5600194424af)
+git add .
+![image](https://github.com/bqminh30/git-demo/assets/64219602/fde2200a-474b-467b-a0ee-a71f89959b06)
+git commit -m "alpha"
+![image](https://github.com/bqminh30/git-demo/assets/64219602/4a635802-23ad-49e9-8c83-04e9cfdc6897)
+Hãy kiểm tra lại trạng thái của file.
+![image](https://github.com/bqminh30/git-demo/assets/64219602/11d21a3e-b524-415b-8a60-aeecdef52004)
 
-But first, tell Git who you are with: 
+Bây giờ, hãy đẩy hai notepad trên GitHub. Mở tài khoản GitHub của bạn và tạo một kho lưu trữ mới. Tên của kho lưu trữ sẽ là "FirstRepo."
+![image](https://github.com/bqminh30/git-demo/assets/64219602/947fab64-c11f-4695-b8e4-31c29b4d6ded)
+Sao chép URL "git remote add origin" URL.
+![image](https://github.com/bqminh30/git-demo/assets/64219602/0bd232bd-a32b-4218-bc12-45bf14da8aa2)
+Dán URL đã sao chép vào Git Bash.
+![image](https://github.com/bqminh30/git-demo/assets/64219602/fab1ff30-451b-4f22-8697-d396b5cdcbaf)
 
-    git config --global user.name "Quang Minh"
-    git config --global user.email bqminh30@gmail.com
+##
+git remote -v
+##
+![image](https://github.com/bqminh30/git-demo/assets/64219602/257477f5-e4ba-4e9c-a85c-2f2545e52e44)
 
-## Creating repositories, adding files, and committing
-
-### Creating a repository from a directory, adding files, and committing
-
-    mkdir vince
-    cd vince
-    echo "This is a test repository." > test.txt
-    git init
-    git add test.txt # this is called "staging"
-    git commit -m "initial import" # this commits all staged files only. # use a commit message
-    cd .. # get to where we were
-
-Note something very important about Git: when you add a new file,
-you're not just telling Git it should be under version control, but
-you're *staging* it in the next commit. When a file already exists,
-you've made changes to it, and you want it to be in the next commit
-you need to add it with git add, or tell git commit to commit all
-files using -a. This allows AWESOME incremental commits. You can also
-unstage a file for commit using git reset (that's advanced, we can
-talk about that later, but to unstage a file, you do git reset
-FILENAME).
-
-### Cloning a repository
-
-If you have an existing repository you want to clone, you use git
-clone. This essentially initializes a empty local git repository, and
-pulls a clone from the remote repository.
-
-    git clone ./vince joe
-    ls
-    cd joe
-    git log
-
-### Working with remotes
-
-Let's mimic the workflow we use most often: a remote "bare"
-repository. The issue with the current workflow is that if Joe commits
-changes, and pushes them to my remote, he would be asked if really
-wants to push to my working repository. In fact, he probably doesn't:
-this is where I am working and I want to be able to pull in his
-changes whenever I like, not have them pushed to me.
-
-Consequently, a very effective git workflow is to have a remote "bare"
-reposistory. The "bare" means it's not a real working directories,
-which we have to explicitly state by default all git repositories are
-working directories (i.e. you can edit files). This is in contrast to
-CVS and SVN. 
-
-We set up a server that is frequently backed up that has a /git
-directory full of our project's bare reposistories. In this example,
-we'll create a bare repository named "remote". Remember, Git works
-with SSH!
-
-    rm -rf joe 
-
-    mkdir remote # this is our pretend remote; in real life, put this on a server everyone has access to
-    cd remote
-    git init --bare # older versions of Git require this to be git --bare init, but use the newest version!
-    ls # see all the Git internal stuff? Not a place to do work!
-    cd ..
-
-Now, we're going to tell my local repository about this remote one.
-
-    cd vince
-    git remote add origin ../remote
-    git remote ## or cat .git/config, SVN users, note that there is only ONE, YES ONE directory!
-
-Now, let's push our commits to remote. 
-    
-    git log # what commit are we at?
-    git push origin master
-
-Why origin master? We want to tell git push (push is the subcommand)
-where we want to push (origin, which is the name of the remote we
-added; "origin" is used by convention) and which branch we're on
-(master is the default).
+Bây giờ, hãy push nội dung vào kho lưu trữ từ xa.
+##
+git push -u origin master
+##
+![image](https://github.com/bqminh30/git-demo/assets/64219602/611620c9-983f-42e4-bcae-91cb9232ff13)
 
 
-Now, let's pretend we're Joe again. Joe wants to get my work, add
-something to it, and check it in.
-
-    cd .. # get to where we were
-    git clone remote joe
-    cd joe
-    ls 
-    git log
-    echo "new gibberish" >> test.txt
-    git commit -a -m "some gibberish added"
-    git push origin master
-
-Ok, so Joe added something to test.txt, commited it, and pushed it to
-the remote. Now, Vince wants to pull in Joe's changes:
-
-   cd ../vince
-   git pull origin master
-   git diff HEAD^
-
-This means take the HEAD (basically a pointer in Git's history to
-where your current working directory is), go back one commit in
-history (the ^), and diff the current working directory with the last
-commit.
-
-We can also look at specific files from older commits using git show:
-
-    git show HEAD^:test.txt
-
-## Git branching
-
-So suppose you're writing an analysis in Python, but someone says it
-would be 10000x easier in R. You want to keep your data organized in
-the existing directories. You think to create a repo_in_R copy of your
-directory, but Keith tells you that this could lead to the innocent
-drowning of a kitten (see
-http://bitsandbites.posterous.com/details-of-next-meeting-12th-january-2012).
-
-What do you do? If you're from the land of SVN and CVS, you're pulling
-out hair, flipping through pages of documentation, and practicing
-branching on fake repositories. If you're using Git, you just sip some
-tea, lean back, and branch. Branches in Git are super easy, because
-they're virtual, not physical. 
 
 
-    git branch # see, we're in master now
-    git checkout -b new-branch
-    git branch
 
-    echo "more gibberish" >> test.txt
-    git commit -a -m "more gibberish added on a dev branch"
-    
-    git checkout master # go back to master
-    echo "different gibberish added. Uh oh." >> test.txt
-    git commit -a -m "different gibberish added, clash anyone? "
- 
-We can look at this situation with:
-
-    gitk --all &
-    # or 
-    git log --graph --all
-
-Now, let's merge that new-branch into master:
-
-   git branch # make sure you're in the branch you want to merge the other into.
-   git merge new-branch
-
-Uh oh, a merge conflict!! It's easy to resolve. Look what's up with
-git status, then manually resolve the conflict. When you're down add
-the files, and commit. That easy! And normally you won't find merge
-conflicts.
-
-    emacs test.txt
-    git add test.txt
-    git commit -m "merge conflict resolved"
-    git push origin master # might as well?
-
-## What's next?
-
- - Following remote branches
- - git refspecs
- - git stash
- - Github
- - git blame
