@@ -1,5 +1,7 @@
 ## Introduction
 
+key:  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
+
 Hãy bắt đầu bằng việc mở Git Bash và định cấu hình nó bằng tên người dùng và ID email.
 
 Để cấu hình, chúng ta sử dụng lệnh sau:
